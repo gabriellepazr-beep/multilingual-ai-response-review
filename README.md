@@ -1,6 +1,6 @@
 # Multilingual AI Response Review
 
-A Python command-line project that turns rubric annotations into a CSV summary and a browser-readable report. The sample has 12 paired examples in English, Spanish, and Portuguese. Each case includes a reference answer and a note explaining the evaluation.
+A Python command-line project that turns rubric annotations into a CSV summary and a browser-readable report. The sample has 13 paired examples in English, Spanish, and Portuguese. Each case includes a reference answer and a note explaining the evaluation.
 
 Open [the sample report](example_output/AI_Response_Review.html) locally in a browser to review the results and expand individual cases.
 
@@ -38,7 +38,7 @@ For example, ES-04 asks for only the number of minutes. Response A gives “25 m
 
 ## Sample results and scope
 
-Across 12 cases, A wins 5, B wins 4, and 3 tie. The sample is synthetic, and the rubric scores are illustrative. No live model was called. The tool summarizes supplied annotations; it does not judge new responses automatically or measure model performance. This project starter was created with AI assistance.
+Across 13 cases, A wins 6, B wins 4, and 3 tie. The sample is synthetic, and the rubric scores are illustrative. No live model was called. The tool summarizes supplied annotations; it does not judge new responses automatically or measure model performance. This project was created with AI assistance, including the ES-05 example.
 
 ## Make it your own
 
