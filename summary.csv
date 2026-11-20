@@ -1,0 +1,5 @@
+group,cases,a_wins,b_wins,ties,a_mean,b_mean
+Overall,13,6,4,3,1.77,1.56
+English,4,2,1,1,1.85,1.48
+Spanish,5,2,2,1,1.72,1.64
+Portuguese,4,2,1,1,1.75,1.55
