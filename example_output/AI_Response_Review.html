@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Multilingual AI Response Review</title>
+<style>
+* {box-sizing:border-box} body {margin:0;background:#edf2f4;color:#172b37;font:16px/1.55 system-ui,sans-serif}
+main {max-width:960px;margin:auto;padding:clamp(16px,5vw,48px)} header {background:#163340;color:#fff;padding:clamp(20px,5vw,40px);border-radius:18px}
+h1 {font-size:clamp(32px,6vw,52px);line-height:1.05;letter-spacing:-.04em;margin:0 0 16px}
+h2 {margin-top:32px} p {margin:12px 0} .table {overflow:auto;border-radius:12px}
+table {width:100%;border-collapse:collapse;background:white;white-space:nowrap}
+th,td {text-align:left;padding:12px;border-bottom:1px solid #dae4e8} th {background:#dcebe8}
+details {background:#fff;border-radius:10px;margin:8px 0;padding:12px 16px;overflow-wrap:anywhere}
+summary {cursor:pointer;font-weight:650} small {color:#49616d}
+</style>
+<main><header><h1>Multilingual AI Response Review</h1>
+<p>13 paired cases with synthetic prompts, responses, and illustrative annotations.</p></header>
+<h2>Rubric results</h2>
+<p>Weighted scores range from 0 to 2. Accuracy counts for 50%, instruction following for 30%, and clarity for 20%. These sample results describe the supplied examples only.</p>
+<div class="table"><table aria-label="Response preference by language">
+<thead><tr><th scope="col">Group</th><th scope="col">Cases</th><th scope="col">A wins</th>
+<th scope="col">B wins</th><th scope="col">Ties</th><th scope="col">A mean</th><th scope="col">B mean</th></tr></thead>
+<tbody><tr><td>Overall</td><td>13</td><td>6</td><td>4</td><td>3</td><td>1.77</td><td>1.56</td></tr><tr><td>English</td><td>4</td><td>2</td><td>1</td><td>1</td><td>1.85</td><td>1.48</td></tr><tr><td>Spanish</td><td>5</td><td>2</td><td>2</td><td>1</td><td>1.72</td><td>1.64</td></tr><tr><td>Portuguese</td><td>4</td><td>2</td><td>1</td><td>1</td><td>1.75</td><td>1.55</td></tr></tbody></table></div>
+<h2>Case review</h2><p>Select a case to see the prompt, reference, and annotation. Rubric values appear in the order accuracy, instruction following, and clarity.</p>
+
+        <details><summary>EN-01 · English · A</summary>
+        <p><strong>Prompt</strong> A shop ships within two business days. An order arrives Monday morning. Give the latest shipping day assuming no holidays.</p>
+        <p><strong>Reference</strong> Wednesday is the latest if Monday is day zero.</p>
+        <p><strong>Response A</strong> Wednesday. <small>Rubric (2, 2, 2)</small></p>
+        <p><strong>Response B</strong> Friday. <small>Rubric (0, 2, 2)</small></p>
+        <p><strong>Annotation note</strong> B overstates the shipping window.</p></details>
+        
+        <details><summary>EN-02 · English · B</summary>
+        <p><strong>Prompt</strong> Summarize this policy in one sentence. Returns are accepted within 30 days with a receipt. Final-sale items cannot be returned.</p>
+        <p><strong>Reference</strong> Include the window, receipt requirement, and final-sale exclusion.</p>
+        <p><strong>Response A</strong> Returns require a receipt within 30 days. Final-sale items are excluded. <small>Rubric (2, 0, 2)</small></p>
+        <p><strong>Response B</strong> You can return eligible items within 30 days with a receipt, except final-sale items. <small>Rubric (2, 2, 2)</small></p>
+        <p><strong>Annotation note</strong> A is accurate but uses two sentences where one was requested.</p></details>
+        
+        <details><summary>EN-03 · English · Tie</summary>
+        <p><strong>Prompt</strong> Convert 0.75 hours into minutes. Reply with only the number.</p>
+        <p><strong>Reference</strong> 45</p>
+        <p><strong>Response A</strong> 45 <small>Rubric (2, 2, 2)</small></p>
+        <p><strong>Response B</strong> 45 <small>Rubric (2, 2, 2)</small></p>
+        <p><strong>Annotation note</strong> Both meet the exact format.</p></details>
+        
+        <details><summary>EN-04 · English · A</summary>
+        <p><strong>Prompt</strong> The library is closed Sunday. It is open 10 a.m. to 6 p.m. Saturday. Suggest one time to visit this weekend.</p>
+        <p><strong>Reference</strong> Any time strictly within Saturday hours is acceptable.</p>
+        <p><strong>Response A</strong> Saturday at 2 p.m. <small>Rubric (2, 2, 2)</small></p>
+        <p><strong>Response B</strong> Saturday at 2 p.m., or Sunday at 2 p.m. <small>Rubric (1, 0, 2)</small></p>
+        <p><strong>Annotation note</strong> B includes a valid time and a closed day, and suggests two times.</p></details>
+        
+        <details><summary>ES-01 · Spanish · A</summary>
+        <p><strong>Prompt</strong> Un pedido cuesta 40 dólares y tiene un descuento del 25 %. Indica el precio final en una frase.</p>
+        <p><strong>Reference</strong> 30 dólares.</p>
+        <p><strong>Response A</strong> El precio final es de 30 dólares. <small>Rubric (2, 2, 2)</small></p>
+        <p><strong>Response B</strong> El precio final es de 35 dólares. <small>Rubric (0, 2, 2)</small></p>
+        <p><strong>Annotation note</strong> B calculates the discount incorrectly.</p></details>
+        
+        <details><summary>ES-02 · Spanish · B</summary>
+        <p><strong>Prompt</strong> Resume en una oración. El taller del martes se traslada al jueves a las 4 p. m. y sigue siendo virtual.</p>
+        <p><strong>Reference</strong> Debe mencionar el jueves, la hora y la modalidad virtual.</p>
+        <p><strong>Response A</strong> El taller será el jueves a las 4 p. m. <small>Rubric (1, 1, 2)</small></p>
+        <p><strong>Response B</strong> El taller se traslada al jueves a las 4 p. m. y seguirá siendo virtual. <small>Rubric (2, 2, 2)</small></p>
+        <p><strong>Annotation note</strong> A omite un dato solicitado, la modalidad virtual.</p></details>
+        
+        <details><summary>ES-03 · Spanish · Tie</summary>
+        <p><strong>Prompt</strong> Traduce al español: The meeting starts at nine.</p>
+        <p><strong>Reference</strong> La reunión empieza a las nueve.</p>
+        <p><strong>Response A</strong> La reunión comienza a las nueve. <small>Rubric (2, 2, 2)</small></p>
+        <p><strong>Response B</strong> La reunión empieza a las nueve. <small>Rubric (2, 2, 2)</small></p>
+        <p><strong>Annotation note</strong> Ambas traducciones conservan el sentido.</p></details>
+        
+        <details><summary>ES-04 · Spanish · B</summary>
+        <p><strong>Prompt</strong> ¿Cuántos minutos transcurren de 8:50 a 9:15? Responde solo con el número.</p>
+        <p><strong>Reference</strong> 25</p>
+        <p><strong>Response A</strong> 25 minutos. <small>Rubric (2, 0, 2)</small></p>
+        <p><strong>Response B</strong> 25 <small>Rubric (2, 2, 2)</small></p>
+        <p><strong>Annotation note</strong> A incluye una unidad a pesar del formato solicitado.</p></details>
+        
+        <details><summary>PT-01 · Portuguese · A</summary>
+        <p><strong>Prompt</strong> Um pacote tem 18 cartões. Distribua os cartões igualmente entre seis pessoas. Quantos cartões cada uma recebe?</p>
+        <p><strong>Reference</strong> Três cartões por pessoa.</p>
+        <p><strong>Response A</strong> Cada pessoa recebe três cartões. <small>Rubric (2, 2, 2)</small></p>
+        <p><strong>Response B</strong> Cada pessoa recebe seis cartões. <small>Rubric (0, 2, 2)</small></p>
+        <p><strong>Annotation note</strong> B confunde a quantidade de pessoas com a quantidade de cartões por pessoa.</p></details>
+        
+        <details><summary>PT-02 · Portuguese · B</summary>
+        <p><strong>Prompt</strong> O balcão atende das 9h às 16h de segunda a sexta. Sugira um único horário de atendimento para terça-feira.</p>
+        <p><strong>Reference</strong> Qualquer horário dentro do expediente de terça-feira.</p>
+        <p><strong>Response A</strong> Terça-feira às 17h. <small>Rubric (0, 2, 2)</small></p>
+        <p><strong>Response B</strong> Terça-feira às 14h. <small>Rubric (2, 2, 2)</small></p>
+        <p><strong>Annotation note</strong> A indica um horário fora do expediente.</p></details>
+        
+        <details><summary>PT-03 · Portuguese · Tie</summary>
+        <p><strong>Prompt</strong> Traduza para o português: The order is ready for pickup.</p>
+        <p><strong>Reference</strong> O pedido está pronto para retirada.</p>
+        <p><strong>Response A</strong> O pedido já pode ser retirado. <small>Rubric (2, 2, 2)</small></p>
+        <p><strong>Response B</strong> O pedido está pronto para retirada. <small>Rubric (2, 2, 2)</small></p>
+        <p><strong>Annotation note</strong> As duas traduções preservam o significado.</p></details>
+        
+        <details><summary>PT-04 · Portuguese · A</summary>
+        <p><strong>Prompt</strong> Em uma frase, avise que a aula de hoje foi cancelada e que a reposição será na sexta-feira.</p>
+        <p><strong>Reference</strong> Mencionar o cancelamento e a reposição na sexta-feira.</p>
+        <p><strong>Response A</strong> A aula de hoje foi cancelada, e a reposição será na sexta-feira. <small>Rubric (2, 2, 2)</small></p>
+        <p><strong>Response B</strong> A aula de hoje foi cancelada. Reposição na sexta. <small>Rubric (2, 0, 1)</small></p>
+        <p><strong>Annotation note</strong> B mantém os fatos, mas usa dois enunciados e deixa o segundo em fragmento.</p></details>
+        
+        <details><summary>ES-05 · Spanish · A</summary>
+        <p><strong>Prompt</strong> Resume en una frase: Los cambios se aceptan dentro de 14 días con recibo. Los artículos personalizados solo se cambian si llegaron dañados.</p>
+        <p><strong>Reference</strong> Incluye los 14 días, el recibo y la excepción de los artículos personalizados dañados.</p>
+        <p><strong>Response A</strong> Se aceptan cambios dentro de 14 días con recibo, pero los artículos personalizados solo se cambian si llegaron dañados. <small>Rubric (2, 2, 2)</small></p>
+        <p><strong>Response B</strong> Se aceptan cambios dentro de 14 días con recibo y se excluyen todos los artículos personalizados. <small>Rubric (1, 1, 2)</small></p>
+        <p><strong>Annotation note</strong> B conserva el plazo y el requisito del recibo, pero excluye los artículos personalizados dañados que sí se pueden cambiar. La redacción es clara, aunque altera la política.</p></details>
+        </main></html>
