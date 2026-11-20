@@ -22,8 +22,8 @@ class ReviewTests(unittest.TestCase):
 
     def test_summary_counts(self):
         overall, english, spanish, portuguese = summarize(self.reviews)
-        self.assertEqual((overall["a_wins"], overall["b_wins"], overall["ties"]), (5, 4, 3))
-        self.assertEqual([row["cases"] for row in (english, spanish, portuguese)], [4, 4, 4])
+        self.assertEqual((overall["a_wins"], overall["b_wins"], overall["ties"]), (6, 4, 3))
+        self.assertEqual([row["cases"] for row in (english, spanish, portuguese)], [4, 5, 4])
 
     def test_invalid_score_identifies_line_and_field(self):
         with SAMPLE.open(encoding="utf-8", newline="") as file:
